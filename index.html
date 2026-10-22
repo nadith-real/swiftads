@@ -1,1 +1,199 @@
-PLACEHOLDER
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Swift Ads — Digital Marketing Agency</title>
+  <meta name="description" content="Swift Ads is a digital marketing agency helping brands grow with performance advertising, web design, social media and brand strategy.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'sans-serif'] },
+          colors: {
+            accent: { DEFAULT: '#F5C518', dark: '#D4A80F' },
+            dark: { 950: '#050505', 900: '#0a0a0a', 800: '#111111', 700: '#1a1a1a', 600: '#222222' }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { background: #050505; }
+    .card-hover { transition: all 0.3s ease; }
+    .card-hover:hover { transform: translateY(-4px); border-color: rgba(245,197,24,0.4); }
+  </style>
+</head>
+<body class="bg-dark-950 text-white font-sans antialiased selection:bg-accent selection:text-black">
+
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-dark-950/90 backdrop-blur-md border-b border-white/5">
+    <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="index.html" class="text-xl font-extrabold tracking-tight">SWIFT<span class="text-accent">ADS</span></a>
+      <div class="hidden md:flex items-center gap-8 text-sm font-medium text-white/70">
+        <a href="index.html" class="hover:text-white transition">Home</a>
+        <a href="services.html" class="hover:text-white transition">Services</a>
+        <a href="advertising.html" class="hover:text-white transition">Advertising</a>
+        <a href="#contact" class="hover:text-white transition">Contact</a>
+      </div>
+      <a href="#contact" class="bg-accent text-black text-sm font-bold px-5 py-2.5 rounded hover:bg-accent-dark transition">Let's Talk</a>
+    </div>
+  </nav>
+
+  <section class="min-h-screen flex items-center justify-center pt-16 relative overflow-hidden">
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(245,197,24,0.08)_0%,transparent_60%)]"></div>
+    <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+      <p class="text-accent text-xs font-semibold tracking-[0.25em] uppercase mb-6">Digital Marketing Agency</p>
+      <h1 class="text-5xl sm:text-6xl md:text-7xl font-extrabold leading-[1.05] tracking-tight mb-6">
+        GROW YOUR BRAND.<br>
+        <span class="text-accent">FASTER.</span>
+      </h1>
+      <p class="text-white/60 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
+        Performance advertising, web design, social media and brand strategy — built to deliver measurable growth without the agency bloat.
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="services.html" class="bg-accent text-black font-bold px-8 py-3.5 rounded hover:bg-accent-dark transition w-full sm:w-auto">View Services</a>
+        <a href="advertising.html" class="border border-white/20 text-white font-medium px-8 py-3.5 rounded hover:bg-white/5 transition w-full sm:w-auto">Advertising Platforms</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 border-t border-white/5">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <p class="text-accent text-xs font-semibold tracking-[0.2em] uppercase mb-3">What We Do</p>
+        <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight">Everything you need<br>to scale online.</h2>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <a href="service-web-design.html" class="card-hover bg-dark-800 border border-white/5 rounded-2xl p-8 block">
+          <div class="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center mb-5">
+            <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          </div>
+          <h3 class="text-lg font-bold mb-2">Web Design & Dev</h3>
+          <p class="text-white/50 text-sm leading-relaxed">High-converting websites and landing pages that look premium and load fast.</p>
+        </a>
+        <a href="service-social-media-marketing.html" class="card-hover bg-dark-800 border border-white/5 rounded-2xl p-8 block">
+          <div class="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center mb-5">
+            <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"/></svg>
+          </div>
+          <h3 class="text-lg font-bold mb-2">Social Media Marketing</h3>
+          <p class="text-white/50 text-sm leading-relaxed">Strategy-led campaigns that grow awareness and drive real engagement.</p>
+        </a>
+        <a href="service-brand-design.html" class="card-hover bg-dark-800 border border-white/5 rounded-2xl p-8 block">
+          <div class="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center mb-5">
+            <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/></svg>
+          </div>
+          <h3 class="text-lg font-bold mb-2">Brand Design</h3>
+          <p class="text-white/50 text-sm leading-relaxed">Logos, visual systems and identity work that make your brand unmistakable.</p>
+        </a>
+        <a href="service-social-media-management.html" class="card-hover bg-dark-800 border border-white/5 rounded-2xl p-8 block">
+          <div class="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center mb-5">
+            <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <h3 class="text-lg font-bold mb-2">Social Media Management</h3>
+          <p class="text-white/50 text-sm leading-relaxed">Daily content, community and reporting so your channels stay consistent.</p>
+        </a>
+        <a href="service-content-creation.html" class="card-hover bg-dark-800 border border-white/5 rounded-2xl p-8 block">
+          <div class="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center mb-5">
+            <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+          </div>
+          <h3 class="text-lg font-bold mb-2">Content Creation</h3>
+          <p class="text-white/50 text-sm leading-relaxed">Scroll-stopping visuals, reels and copy crafted for each platform.</p>
+        </a>
+        <a href="service-social-media-consulting.html" class="card-hover bg-dark-800 border border-white/5 rounded-2xl p-8 block">
+          <div class="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center mb-5">
+            <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+          </div>
+          <h3 class="text-lg font-bold mb-2">Social Media Consulting</h3>
+          <p class="text-white/50 text-sm leading-relaxed">Strategy sessions and audits to unlock the next level of growth.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 border-t border-white/5 bg-dark-900">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <p class="text-accent text-xs font-semibold tracking-[0.2em] uppercase mb-3">Paid Media</p>
+        <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight">Advertising that<br>actually converts.</h2>
+        <p class="text-white/50 mt-4 max-w-xl mx-auto">We run performance campaigns across the platforms that matter most for your audience.</p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <a href="ads-google.html" class="card-hover bg-dark-800 border border-white/5 rounded-2xl p-6 text-center block">
+          <div class="text-3xl mb-3">🔍</div>
+          <h3 class="font-bold mb-1">Google Ads</h3>
+          <p class="text-white/40 text-sm">Search, Display & YouTube</p>
+        </a>
+        <a href="ads-meta.html" class="card-hover bg-dark-800 border border-white/5 rounded-2xl p-6 text-center block">
+          <div class="text-3xl mb-3">📘</div>
+          <h3 class="font-bold mb-1">Meta Ads</h3>
+          <p class="text-white/40 text-sm">Facebook & Instagram</p>
+        </a>
+        <a href="ads-pinterest.html" class="card-hover bg-dark-800 border border-white/5 rounded-2xl p-6 text-center block">
+          <div class="text-3xl mb-3">📌</div>
+          <h3 class="font-bold mb-1">Pinterest Ads</h3>
+          <p class="text-white/40 text-sm">Visual discovery & intent</p>
+        </a>
+        <a href="ads-tiktok.html" class="card-hover bg-dark-800 border border-white/5 rounded-2xl p-6 text-center block">
+          <div class="text-3xl mb-3">🎵</div>
+          <h3 class="font-bold mb-1">TikTok Ads</h3>
+          <p class="text-white/40 text-sm">Viral reach & engagement</p>
+        </a>
+      </div>
+      <div class="text-center mt-10">
+        <a href="advertising.html" class="inline-flex items-center gap-2 text-accent font-semibold hover:underline">Explore advertising →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 border-t border-white/5">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div>
+          <p class="text-accent text-xs font-semibold tracking-[0.2em] uppercase mb-3">Why Swift Ads</p>
+          <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight mb-6">No fluff.<br>Just results.</h2>
+          <p class="text-white/50 leading-relaxed mb-8">We're a lean digital marketing agency based in Colombo. We focus on clear strategy, transparent reporting and campaigns that move the needle — not vanity metrics.</p>
+          <ul class="space-y-4">
+            <li class="flex items-start gap-3"><span class="text-accent mt-0.5">✓</span><span class="text-white/70">Transparent reporting every week</span></li>
+            <li class="flex items-start gap-3"><span class="text-accent mt-0.5">✓</span><span class="text-white/70">No long-term lock-in contracts</span></li>
+            <li class="flex items-start gap-3"><span class="text-accent mt-0.5">✓</span><span class="text-white/70">Dedicated strategist for your account</span></li>
+            <li class="flex items-start gap-3"><span class="text-accent mt-0.5">✓</span><span class="text-white/70">Creative + media under one roof</span></li>
+          </ul>
+        </div>
+        <div class="relative">
+          <img src="https://images.pexels.com/photos/6476260/pexels-photo-6476260.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Team reviewing campaign performance" class="rounded-2xl border border-white/10 w-full object-cover aspect-[4/3]">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="py-24 border-t border-white/5 bg-dark-900">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <p class="text-accent text-xs font-semibold tracking-[0.2em] uppercase mb-3">Get Started</p>
+      <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight mb-6">Ready to grow?</h2>
+      <p class="text-white/50 mb-10 max-w-xl mx-auto">Tell us about your business and goals. We'll reply within one business day with a clear next step.</p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+        <a href="mailto:hello@swiftads.lk" class="bg-accent text-black font-bold px-8 py-3.5 rounded hover:bg-accent-dark transition w-full sm:w-auto">hello@swiftads.lk</a>
+        <a href="https://wa.me/94771234567" target="_blank" class="border border-white/20 text-white font-medium px-8 py-3.5 rounded hover:bg-white/5 transition w-full sm:w-auto">WhatsApp Us</a>
+      </div>
+      <p class="text-white/30 text-sm">Colombo, Sri Lanka · Available worldwide</p>
+    </div>
+  </section>
+
+  <footer class="border-t border-white/5 py-10">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-white/40">
+      <div class="font-bold text-white">SWIFT<span class="text-accent">ADS</span></div>
+      <div class="flex gap-6">
+        <a href="services.html" class="hover:text-white transition">Services</a>
+        <a href="advertising.html" class="hover:text-white transition">Advertising</a>
+        <a href="webmasters.html" class="hover:text-white transition">Webmasters</a>
+      </div>
+      <p>© 2026 Swift Ads. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
