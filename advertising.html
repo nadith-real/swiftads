@@ -4,200 +4,108 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Advertising — Swift Ads</title>
-  <meta name="description" content="Performance advertising on Google, Meta, Pinterest and TikTok. Campaign setup, creative and optimisation from Swift Ads.">
+  <meta name="description" content="Performance advertising on Google, Meta, Pinterest and TikTok from Swift Ads.">
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: { sans: ['Inter', 'sans-serif'] },
-          colors: {
-            accent: { DEFAULT: '#F5C518', dark: '#D4A80F' },
-            dark: { 950: '#050505', 900: '#0a0a0a', 800: '#111111', 700: '#1a1a1a', 600: '#222222' }
-          }
-        }
-      }
-    }
-  </script>
-  <style>
-    body { background: #050505; }
-    .card-hover { transition: all 0.3s ease; }
-    .card-hover:hover { transform: translateY(-4px); border-color: rgba(245,197,24,0.4); }
-  </style>
+  <script>tailwind.config={theme:{extend:{fontFamily:{sans:['Inter','sans-serif']},colors:{accent:{DEFAULT:'#F5C518',dark:'#D4A80F'},dark:{950:'#050505',900:'#0a0a0a',800:'#111111'}}}}}</script>
+  <style>body{background:#050505}.card-hover{transition:all .3s ease}.card-hover:hover{transform:translateY(-4px);border-color:rgba(245,197,24,.4)}</style>
 </head>
 <body class="bg-dark-950 text-white font-sans antialiased selection:bg-accent selection:text-black">
-
-  <!-- Nav -->
-  <nav class="fixed top-0 left-0 right-0 z-50 bg-dark-950/90 backdrop-blur-md border-b border-white/5">
-    <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-      <a href="index.html" class="text-xl font-extrabold tracking-tight">SWIFT<span class="text-accent">ADS</span></a>
-      <div class="hidden md:flex items-center gap-8 text-sm font-medium text-white/70">
-        <a href="index.html" class="hover:text-white transition">Home</a>
-        <a href="services.html" class="hover:text-white transition">Services</a>
-        <a href="advertising.html" class="text-white">Advertising</a>
-        <a href="index.html#contact" class="hover:text-white transition">Contact</a>
-      </div>
-      <a href="index.html#contact" class="bg-accent text-black text-sm font-bold px-5 py-2.5 rounded hover:bg-accent-dark transition">Let's Talk</a>
+<nav class="fixed top-0 left-0 right-0 z-50 bg-dark-950/90 backdrop-blur-md border-b border-white/5">
+  <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+    <a href="index.html" class="text-xl font-extrabold tracking-tight">SWIFT<span class="text-accent">ADS</span></a>
+    <div class="hidden md:flex items-center gap-8 text-sm font-medium text-white/70">
+      <a href="index.html" class="hover:text-white transition">Home</a>
+      <a href="services.html" class="hover:text-white transition">Services</a>
+      <a href="advertising.html" class="text-white">Advertising</a>
+      <a href="index.html#contact" class="hover:text-white transition">Contact</a>
     </div>
-  </nav>
-
-  <!-- Hero -->
-  <section class="pt-32 pb-20 relative overflow-hidden">
-    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(245,197,24,0.07)_0%,transparent_55%)]"></div>
-    <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
-      <p class="text-accent text-xs font-semibold tracking-[0.25em] uppercase mb-6">Paid Media</p>
-      <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-[1.08] tracking-tight mb-6">
-        Ads that<br><span class="text-accent">actually convert.</span>
-      </h1>
-      <p class="text-white/55 text-lg max-w-2xl mx-auto leading-relaxed">
-        We plan, launch and optimise performance campaigns on the platforms that matter — so every rupee of ad spend works harder.
-      </p>
+    <a href="index.html#contact" class="bg-accent text-black text-sm font-bold px-5 py-2.5 rounded hover:bg-accent-dark transition">Let's Talk</a>
+  </div>
+</nav>
+<section class="pt-32 pb-20 relative overflow-hidden">
+  <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(245,197,24,0.07)_0%,transparent_55%)]"></div>
+  <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+    <p class="text-accent text-xs font-semibold tracking-[0.25em] uppercase mb-6">Paid Media</p>
+    <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-[1.08] tracking-tight mb-6">Ads that<br><span class="text-accent">actually convert.</span></h1>
+    <p class="text-white/55 text-lg max-w-2xl mx-auto leading-relaxed">We plan, launch and optimise performance campaigns on the platforms that matter.</p>
+  </div>
+</section>
+<section class="pb-24">
+  <div class="max-w-5xl mx-auto px-6 space-y-5">
+    <a href="ads-google.html" class="card-hover bg-dark-800 border border-white/5 rounded-2xl p-8 md:p-10 block group">
+      <div class="flex flex-col md:flex-row md:items-center gap-6">
+        <div class="w-14 h-14 rounded-xl bg-white/5 flex items-center justify-center shrink-0 text-3xl">🔍</div>
+        <div class="flex-1">
+          <h2 class="text-xl font-bold mb-1 group-hover:text-accent transition">Google Ads</h2>
+          <p class="text-white/50 text-sm">Search, Performance Max, YouTube & Display — high-intent demand and clear ROAS.</p>
+        </div>
+        <span class="text-accent text-sm font-semibold hidden md:block">View →</span>
+      </div>
+    </a>
+    <a href="ads-meta.html" class="card-hover bg-dark-800 border border-white/5 rounded-2xl p-8 md:p-10 block group">
+      <div class="flex flex-col md:flex-row md:items-center gap-6">
+        <div class="w-14 h-14 rounded-xl bg-white/5 flex items-center justify-center shrink-0 text-3xl">📘</div>
+        <div class="flex-1">
+          <h2 class="text-xl font-bold mb-1 group-hover:text-accent transition">Meta Ads (Facebook & Instagram)</h2>
+          <p class="text-white/50 text-sm">Creative systems, audience testing and full-funnel campaigns that convert.</p>
+        </div>
+        <span class="text-accent text-sm font-semibold hidden md:block">View →</span>
+      </div>
+    </a>
+    <a href="ads-pinterest.html" class="card-hover bg-dark-800 border border-white/5 rounded-2xl p-8 md:p-10 block group">
+      <div class="flex flex-col md:flex-row md:items-center gap-6">
+        <div class="w-14 h-14 rounded-xl bg-white/5 flex items-center justify-center shrink-0 text-3xl">📌</div>
+        <div class="flex-1">
+          <h2 class="text-xl font-bold mb-1 group-hover:text-accent transition">Pinterest Ads</h2>
+          <p class="text-white/50 text-sm">Visual discovery for e-commerce, lifestyle and high-intent planners.</p>
+        </div>
+        <span class="text-accent text-sm font-semibold hidden md:block">View →</span>
+      </div>
+    </a>
+    <a href="ads-tiktok.html" class="card-hover bg-dark-800 border border-white/5 rounded-2xl p-8 md:p-10 block group">
+      <div class="flex flex-col md:flex-row md:items-center gap-6">
+        <div class="w-14 h-14 rounded-xl bg-white/5 flex items-center justify-center shrink-0 text-3xl">🎵</div>
+        <div class="flex-1">
+          <h2 class="text-xl font-bold mb-1 group-hover:text-accent transition">TikTok Ads</h2>
+          <p class="text-white/50 text-sm">Native creative, Spark Ads and testing that reaches younger (and broader) audiences.</p>
+        </div>
+        <span class="text-accent text-sm font-semibold hidden md:block">View →</span>
+      </div>
+    </a>
+  </div>
+</section>
+<section class="py-20 border-t border-white/5 bg-dark-900">
+  <div class="max-w-5xl mx-auto px-6">
+    <div class="text-center mb-14">
+      <p class="text-accent text-xs font-semibold tracking-[0.2em] uppercase mb-3">How we work</p>
+      <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight">Simple process.<br>Clear results.</h2>
     </div>
-  </section>
-
-  <!-- Platforms -->
-  <section class="pb-24">
-    <div class="max-w-5xl mx-auto px-6 space-y-6">
-
-      <!-- Google -->
-      <div id="google" class="card-hover bg-dark-800 border border-white/5 rounded-2xl p-8 md:p-10">
-        <div class="flex flex-col md:flex-row md:items-start gap-6">
-          <div class="w-14 h-14 rounded-xl bg-white/5 flex items-center justify-center shrink-0 text-3xl">🔍</div>
-          <div class="flex-1">
-            <h2 class="text-2xl font-bold mb-3">Google Ads</h2>
-            <p class="text-white/50 leading-relaxed mb-5">
-              Capture high-intent demand with Search, reach new audiences with Display and YouTube, and retarget people who already know you. We structure accounts for clarity and scale.
-            </p>
-            <ul class="grid sm:grid-cols-2 gap-2 text-sm text-white/60 mb-6">
-              <li class="flex items-center gap-2"><span class="text-accent">→</span> Search & Performance Max</li>
-              <li class="flex items-center gap-2"><span class="text-accent">→</span> YouTube & Display</li>
-              <li class="flex items-center gap-2"><span class="text-accent">→</span> Remarketing & brand protection</li>
-              <li class="flex items-center gap-2"><span class="text-accent">→</span> Conversion tracking & ROAS focus</li>
-            </ul>
-            <p class="text-xs text-white/35">Ideal for: lead gen, e-commerce, local services</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Meta -->
-      <div id="meta" class="card-hover bg-dark-800 border border-white/5 rounded-2xl p-8 md:p-10">
-        <div class="flex flex-col md:flex-row md:items-start gap-6">
-          <div class="w-14 h-14 rounded-xl bg-white/5 flex items-center justify-center shrink-0 text-3xl">📘</div>
-          <div class="flex-1">
-            <h2 class="text-2xl font-bold mb-3">Meta Ads (Facebook & Instagram)</h2>
-            <p class="text-white/50 leading-relaxed mb-5">
-              Create demand and nurture it. We build creative systems, test audiences and optimise for the metrics that matter to your business — not just vanity engagement.
-            </p>
-            <ul class="grid sm:grid-cols-2 gap-2 text-sm text-white/60 mb-6">
-              <li class="flex items-center gap-2"><span class="text-accent">→</span> Feed, Stories & Reels placements</li>
-              <li class="flex items-center gap-2"><span class="text-accent">→</span> Advantage+ & custom audiences</li>
-              <li class="flex items-center gap-2"><span class="text-accent">→</span> Creative testing frameworks</li>
-              <li class="flex items-center gap-2"><span class="text-accent">→</span> Full-funnel (awareness → purchase)</li>
-            </ul>
-            <p class="text-xs text-white/35">Ideal for: DTC brands, apps, local businesses, lead gen</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Pinterest -->
-      <div id="pinterest" class="card-hover bg-dark-800 border border-white/5 rounded-2xl p-8 md:p-10">
-        <div class="flex flex-col md:flex-row md:items-start gap-6">
-          <div class="w-14 h-14 rounded-xl bg-white/5 flex items-center justify-center shrink-0 text-3xl">📌</div>
-          <div class="flex-1">
-            <h2 class="text-2xl font-bold mb-3">Pinterest Ads</h2>
-            <p class="text-white/50 leading-relaxed mb-5">
-              Reach people when they are actively planning and discovering. Strong for lifestyle, home, fashion, food and any product with visual appeal. Lower competition, high intent.
-            </p>
-            <ul class="grid sm:grid-cols-2 gap-2 text-sm text-white/60 mb-6">
-              <li class="flex items-center gap-2"><span class="text-accent">→</span> Standard & shopping ads</li>
-              <li class="flex items-center gap-2"><span class="text-accent">→</span> Idea pins & collections</li>
-              <li class="flex items-center gap-2"><span class="text-accent">→</span> Keyword & interest targeting</li>
-              <li class="flex items-center gap-2"><span class="text-accent">→</span> Catalog & conversion campaigns</li>
-            </ul>
-            <p class="text-xs text-white/35">Ideal for: e-commerce, lifestyle, home & design brands</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- TikTok -->
-      <div id="tiktok" class="card-hover bg-dark-800 border border-white/5 rounded-2xl p-8 md:p-10">
-        <div class="flex flex-col md:flex-row md:items-start gap-6">
-          <div class="w-14 h-14 rounded-xl bg-white/5 flex items-center justify-center shrink-0 text-3xl">🎵</div>
-          <div class="flex-1">
-            <h2 class="text-2xl font-bold mb-3">TikTok Ads</h2>
-            <p class="text-white/50 leading-relaxed mb-5">
-              Reach younger (and increasingly broader) audiences with native creative that feels like organic content. We handle Spark Ads, in-feed and top-view placements with a strong creative testing cadence.
-            </p>
-            <ul class="grid sm:grid-cols-2 gap-2 text-sm text-white/60 mb-6">
-              <li class="flex items-center gap-2"><span class="text-accent">→</span> In-Feed & Spark Ads</li>
-              <li class="flex items-center gap-2"><span class="text-accent">→</span> TopView & branded effects</li>
-              <li class="flex items-center gap-2"><span class="text-accent">→</span> Creative-first testing</li>
-              <li class="flex items-center gap-2"><span class="text-accent">→</span> Pixel & events setup</li>
-            </ul>
-            <p class="text-xs text-white/35">Ideal for: consumer brands, apps, entertainment, Gen Z/Millennial audiences</p>
-          </div>
-        </div>
-      </div>
-
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="text-center"><div class="text-accent font-bold text-sm mb-2">01</div><h3 class="font-bold mb-2">Audit & Goals</h3><p class="text-white/45 text-sm">Review setup, competitors and define success metrics.</p></div>
+      <div class="text-center"><div class="text-accent font-bold text-sm mb-2">02</div><h3 class="font-bold mb-2">Strategy & Creative</h3><p class="text-white/45 text-sm">Audience mapping, offer structure and creative angles.</p></div>
+      <div class="text-center"><div class="text-accent font-bold text-sm mb-2">03</div><h3 class="font-bold mb-2">Launch & Test</h3><p class="text-white/45 text-sm">Structured tests so we learn fast and scale winners.</p></div>
+      <div class="text-center"><div class="text-accent font-bold text-sm mb-2">04</div><h3 class="font-bold mb-2">Optimise & Scale</h3><p class="text-white/45 text-sm">Weekly reporting and clear recommendations.</p></div>
     </div>
-  </section>
-
-  <!-- Process -->
-  <section class="py-20 border-t border-white/5 bg-dark-900">
-    <div class="max-w-5xl mx-auto px-6">
-      <div class="text-center mb-14">
-        <p class="text-accent text-xs font-semibold tracking-[0.2em] uppercase mb-3">How we work</p>
-        <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight">Simple process.<br>Clear results.</h2>
-      </div>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div class="text-center">
-          <div class="text-accent font-bold text-sm mb-2">01</div>
-          <h3 class="font-bold mb-2">Audit & Goals</h3>
-          <p class="text-white/45 text-sm">We review your current setup, competitors and define success metrics.</p>
-        </div>
-        <div class="text-center">
-          <div class="text-accent font-bold text-sm mb-2">02</div>
-          <h3 class="font-bold mb-2">Strategy & Creative</h3>
-          <p class="text-white/45 text-sm">Audience mapping, offer structure and creative angles ready for testing.</p>
-        </div>
-        <div class="text-center">
-          <div class="text-accent font-bold text-sm mb-2">03</div>
-          <h3 class="font-bold mb-2">Launch & Test</h3>
-          <p class="text-white/45 text-sm">Campaigns go live with structured tests so we learn fast and scale winners.</p>
-        </div>
-        <div class="text-center">
-          <div class="text-accent font-bold text-sm mb-2">04</div>
-          <h3 class="font-bold mb-2">Optimise & Scale</h3>
-          <p class="text-white/45 text-sm">Weekly reporting, continuous optimisation and clear recommendations.</p>
-        </div>
-      </div>
+  </div>
+</section>
+<section class="py-20 border-t border-white/5">
+  <div class="max-w-3xl mx-auto px-6 text-center">
+    <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight mb-4">Ready to scale with paid media?</h2>
+    <p class="text-white/50 mb-8">Share your current spend and goals — we’ll come back with a clear plan.</p>
+    <a href="index.html#contact" class="inline-block bg-accent text-black font-bold px-8 py-3.5 rounded hover:bg-accent-dark transition">Talk to us</a>
+  </div>
+</section>
+<footer class="border-t border-white/5 py-10">
+  <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-white/40">
+    <div class="font-bold text-white">SWIFT<span class="text-accent">ADS</span></div>
+    <div class="flex gap-6">
+      <a href="services.html" class="hover:text-white transition">Services</a>
+      <a href="advertising.html" class="hover:text-white transition">Advertising</a>
+      <a href="webmasters.html" class="hover:text-white transition">Webmasters</a>
     </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="py-20 border-t border-white/5">
-    <div class="max-w-3xl mx-auto px-6 text-center">
-      <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight mb-4">Ready to scale with paid media?</h2>
-      <p class="text-white/50 mb-8">Share your current spend and goals — we’ll come back with a clear plan.</p>
-      <a href="index.html#contact" class="inline-block bg-accent text-black font-bold px-8 py-3.5 rounded hover:bg-accent-dark transition">Talk to us</a>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="border-t border-white/5 py-10">
-    <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-white/40">
-      <div class="font-bold text-white">SWIFT<span class="text-accent">ADS</span></div>
-      <div class="flex gap-6">
-        <a href="services.html" class="hover:text-white transition">Services</a>
-        <a href="advertising.html" class="hover:text-white transition">Advertising</a>
-        <a href="webmasters.html" class="hover:text-white transition">Webmasters</a>
-      </div>
-      <p>© 2026 Swift Ads. All rights reserved.</p>
-    </div>
-  </footer>
-
+    <p>© 2026 Swift Ads. All rights reserved.</p>
+  </div>
+</footer>
 </body>
 </html>
