@@ -180,6 +180,15 @@ body>section:first-of-type a:hover{transform:translateY(-3px)}
   @media(prefers-reduced-motion:reduce){.swift-hero *, .swift-hero:before,.swift-hero:after{animation:none!important;transition:none!important}.swift-dashboard{transform:none}.swift-float-tag{translate:none}}
 </style>
 
+<style id="swift-homepage-cinematic-cascade-fix">
+/* Keep the new hero's cinematic art direction above legacy homepage effects. */
+body>section:first-of-type.swift-hero{background:radial-gradient(ellipse at 72% 48%,#101f40 0%,#0a1224 34%,#070b16 72%)!important}
+body>section:first-of-type.swift-hero:before{display:none!important}
+body>section:first-of-type.swift-hero:after{content:"";position:absolute;inset:0;pointer-events:none;z-index:0;background:linear-gradient(110deg,rgba(7,11,22,.94) 0%,rgba(7,11,22,.54) 52%,rgba(7,11,22,.08) 100%);opacity:.8}
+body>section:first-of-type.swift-hero h1 span:after{display:none!important}
+body>section:first-of-type.swift-hero>div{position:relative;z-index:1}
+@media(max-width:1023px){body>section:first-of-type.swift-hero:after{background:linear-gradient(180deg,rgba(7,11,22,.32),rgba(7,11,22,.1) 55%,rgba(7,11,22,.65))}}
+</style>
 </head>
 <body class="bg-white text-ink font-sans antialiased selection:bg-brand selection:text-white">
 
