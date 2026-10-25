@@ -96,6 +96,90 @@ body>section:first-of-type a:hover{transform:translateY(-3px)}
 @media(min-width:768px){body>section:first-of-type::before{background-size:68px 68px}body>section:first-of-type::after{left:52%;top:47%}}
 @media(prefers-reduced-motion:reduce){body>section:first-of-type::after{animation:none}body>section:first-of-type h1 span::after{animation:none}body>section:first-of-type a[class*="bg-brand"]::after{display:none}body>section:first-of-type a:hover,.card-hover:hover{transform:none}}
 </style>
+
+<style id="swift-homepage-cinematic">
+  :root{--swift-ink:#070b16;--swift-blue:#3b82f6;--swift-cyan:#67e8f9;--swift-ease:cubic-bezier(.2,.8,.2,1)}
+  body{background:#fff}
+  nav{background:rgba(255,255,255,.88)!important;backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-color:rgba(148,163,184,.22)!important}
+  nav>div{height:72px!important}
+  nav a{transition:color .25s ease,background .25s ease,transform .3s var(--swift-ease)}
+  nav a[href="#contact"]{border-radius:10px;box-shadow:0 7px 20px rgba(37,99,235,.16)}
+  .swift-hero{isolation:isolate;background:radial-gradient(ellipse at 72% 48%,#101f40 0%,#0a1224 34%,#070b16 72%);color:#fff}
+  .swift-hero:after{content:"";position:absolute;inset:0;pointer-events:none;z-index:0;background:linear-gradient(110deg,rgba(7,11,22,.94) 0%,rgba(7,11,22,.54) 52%,rgba(7,11,22,.08) 100%);opacity:.8}
+  .swift-hero-grid{position:absolute;inset:0;z-index:0;pointer-events:none;opacity:.26;background-image:linear-gradient(rgba(147,197,253,.10) 1px,transparent 1px),linear-gradient(90deg,rgba(147,197,253,.10) 1px,transparent 1px);background-size:58px 58px;mask-image:linear-gradient(to bottom,black 0%,rgba(0,0,0,.65) 58%,transparent 100%)}
+  .swift-hero-glow{position:absolute;z-index:0;pointer-events:none;border-radius:50%;filter:blur(2px);will-change:transform}
+  .swift-hero-glow-one{width:660px;height:660px;right:-6%;top:3%;background:radial-gradient(circle,rgba(37,99,235,.27),rgba(37,99,235,.07) 42%,transparent 70%);animation:swift-glow-drift 16s ease-in-out infinite alternate}
+  .swift-hero-glow-two{width:480px;height:480px;left:-15%;bottom:-28%;background:radial-gradient(circle,rgba(8,145,178,.15),transparent 68%);animation:swift-glow-drift 20s ease-in-out infinite alternate-reverse}
+  .swift-hero-copy{position:relative;z-index:2}
+  .swift-eyebrow{color:#cbd5e1;background:rgba(255,255,255,.045);border:1px solid rgba(148,163,184,.22);box-shadow:inset 0 1px rgba(255,255,255,.04)}
+  .swift-live-dot,.swift-dash-pulse{width:7px;height:7px;display:inline-block;border-radius:50%;background:#67e8f9;box-shadow:0 0 0 4px rgba(103,232,249,.12),0 0 16px rgba(103,232,249,.7)}
+  .swift-gradient-text{background:linear-gradient(100deg,#fff 5%,#93c5fd 42%,#60a5fa 70%,#67e8f9 100%);background-size:180% auto;color:transparent;background-clip:text;-webkit-background-clip:text;animation:swift-gradient-flow 8s ease-in-out infinite alternate}
+  .swift-primary-cta{background:linear-gradient(110deg,#2563eb,#3b82f6 58%,#60a5fa);box-shadow:0 12px 34px rgba(37,99,235,.28),inset 0 1px rgba(255,255,255,.28);position:relative;overflow:hidden;transition:transform .35s var(--swift-ease),box-shadow .35s ease}
+  .swift-primary-cta:before{content:"";position:absolute;inset:-80% auto -80% -45%;width:28%;transform:rotate(22deg);background:linear-gradient(90deg,transparent,rgba(255,255,255,.45),transparent);transition:left .8s var(--swift-ease)}
+  .swift-primary-cta:hover{transform:translateY(-3px);box-shadow:0 18px 42px rgba(37,99,235,.42),inset 0 1px rgba(255,255,255,.3)}
+  .swift-primary-cta:hover:before{left:130%}
+  .swift-arrow{transition:transform .3s var(--swift-ease)}.swift-primary-cta:hover .swift-arrow{transform:translate(3px,-3px)}
+  .swift-secondary-cta{border:1px solid rgba(203,213,225,.28);background:rgba(255,255,255,.035);transition:transform .3s var(--swift-ease),background .3s ease,border-color .3s ease}
+  .swift-secondary-cta:hover{transform:translateY(-3px);background:rgba(255,255,255,.09);border-color:rgba(147,197,253,.65)}
+  .swift-check{color:#67e8f9;font-weight:800}.swift-foot-separator{height:3px;width:3px;background:#475569;border-radius:50%}
+  .swift-visual-wrap{z-index:2;min-height:480px;display:flex;align-items:center;justify-content:center;perspective:1200px}
+  .swift-visual-orbit{position:absolute;border:1px solid rgba(96,165,250,.13);border-radius:50%;pointer-events:none}
+  .swift-orbit-a{width:105%;aspect-ratio:1;transform:rotate(-23deg) scaleY(.72);box-shadow:0 0 80px rgba(37,99,235,.06);animation:swift-orbit 24s linear infinite}
+  .swift-orbit-b{width:122%;aspect-ratio:1;transform:rotate(38deg) scaleY(.72);border-style:dashed;border-color:rgba(103,232,249,.10);animation:swift-orbit 42s linear infinite reverse}
+  .swift-dashboard{width:min(100%,520px);position:relative;z-index:2;border-radius:20px;overflow:hidden;background:linear-gradient(145deg,rgba(20,32,57,.96),rgba(10,17,32,.97));border:1px solid rgba(148,163,184,.28);box-shadow:0 40px 100px rgba(0,0,0,.48),0 0 0 8px rgba(255,255,255,.018),inset 0 1px rgba(255,255,255,.10);transform:rotateY(-7deg) rotateX(2deg);animation:swift-dashboard-float 8s ease-in-out infinite}
+  .swift-dashboard-top{height:48px;padding:0 18px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(148,163,184,.14);background:rgba(255,255,255,.025)}
+  .swift-window-dot{width:6px;height:6px;border-radius:50%;background:#475569}.swift-window-dot:first-child{background:#fb7185}.swift-window-dot:nth-child(2){background:#fbbf24}.swift-window-dot:nth-child(3){background:#34d399}
+  .swift-dashboard-label{font-size:8px;font-weight:800;letter-spacing:.18em;color:#94a3b8}.swift-dashboard-menu{letter-spacing:2px;color:#64748b;font-size:12px}
+  .swift-dashboard-body{padding:clamp(20px,3vw,30px)}
+  .swift-dash-kicker{font-size:9px;font-weight:800;letter-spacing:.2em;color:#60a5fa;margin-bottom:10px}
+  .swift-dash-title{font-size:clamp(28px,4vw,42px);line-height:.98;letter-spacing:-.055em;font-weight:800;color:#f8fafc}
+  .swift-dash-orbit{width:72px;height:72px;border-radius:50%;border:1px solid rgba(96,165,250,.35);display:grid;place-items:center;position:relative;background:radial-gradient(circle,rgba(37,99,235,.2),transparent 65%)}
+  .swift-dash-orbit:before,.swift-dash-orbit:after{content:"";position:absolute;border:1px solid rgba(103,232,249,.32);border-radius:50%;inset:9px;transform:rotateX(62deg) rotate(25deg)}
+  .swift-dash-orbit:after{inset:17px;transform:rotateX(62deg) rotate(-45deg)}
+  .swift-dash-orbit span{width:10px;height:10px;border-radius:50%;background:#67e8f9;box-shadow:0 0 24px #38bdf8;z-index:1}.swift-dash-orbit i{position:absolute;right:8px;top:8px;width:5px;height:5px;background:#60a5fa;border-radius:50%;box-shadow:0 0 10px #60a5fa}
+  .swift-flow-line{display:flex;align-items:center;gap:5px;margin:25px 0 14px;height:1px;background:linear-gradient(90deg,transparent,rgba(96,165,250,.65),rgba(103,232,249,.55),transparent)}
+  .swift-flow-line span{height:5px;width:5px;border-radius:50%;background:#60a5fa;box-shadow:0 0 10px rgba(96,165,250,.8)}.swift-flow-line span:nth-child(2){margin-left:auto;margin-right:auto;background:#67e8f9}
+  .swift-system-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .swift-system-card{min-width:0;display:flex;align-items:center;gap:11px;padding:14px 12px;border-radius:12px;border:1px solid rgba(148,163,184,.16);background:linear-gradient(145deg,rgba(255,255,255,.055),rgba(255,255,255,.018));transition:transform .35s var(--swift-ease),border-color .35s ease,background .35s ease}
+  .swift-system-card:hover{transform:translateY(-3px);border-color:rgba(96,165,250,.5);background:rgba(37,99,235,.10)}
+  .swift-system-featured{border-color:rgba(96,165,250,.34);background:linear-gradient(120deg,rgba(37,99,235,.17),rgba(255,255,255,.025))}
+  .swift-system-symbol{flex:0 0 34px;width:34px;height:34px;display:grid;place-items:center;border-radius:9px;color:#93c5fd;background:rgba(59,130,246,.13);font-size:17px}
+  .swift-system-card b{display:block;color:#e2e8f0;font-size:10px;line-height:1.4;font-weight:700}.swift-system-card small{display:block;margin-top:4px;color:#8493ab;font-size:8px;line-height:1.4}
+  .swift-system-arrow{margin-left:auto;align-self:flex-start;color:#60a5fa;font-size:12px}
+  .swift-dash-bottom{display:flex;align-items:center;gap:9px;margin-top:20px;padding-top:17px;border-top:1px solid rgba(148,163,184,.13);color:#94a3b8;font-size:10px}
+  .swift-dash-bottom .swift-dash-pulse{width:5px;height:5px;box-shadow:0 0 0 3px rgba(103,232,249,.08),0 0 12px rgba(103,232,249,.6)}
+  .swift-dash-bottom-line{height:1px;flex:1;background:linear-gradient(90deg,rgba(96,165,250,.4),transparent)}
+  .swift-float-tag{position:absolute;z-index:3;display:flex;align-items:center;gap:10px;padding:12px 15px;border-radius:13px;background:rgba(12,22,42,.88);border:1px solid rgba(148,163,184,.25);box-shadow:0 18px 40px rgba(0,0,0,.25);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);animation:swift-tag-float 6s ease-in-out infinite}
+  .swift-tag-top{top:8%;right:-2%}.swift-tag-bottom{bottom:13%;left:-4%;animation-delay:-3s}
+  .swift-tag-icon{display:grid;place-items:center;width:34px;height:34px;border-radius:10px;color:#a5b4fc;background:rgba(129,140,248,.14);font-size:17px}
+  .swift-tag-icon-blue{color:#67e8f9;background:rgba(6,182,212,.13)}
+  .swift-float-tag b{display:block;color:#f1f5f9;font-size:11px}.swift-float-tag small{display:block;color:#94a3b8;font-size:9px;margin-top:3px}
+  .swift-visual-caption{display:flex;align-items:center;justify-content:center;gap:10px;position:absolute;bottom:-24px;left:0;right:0;color:#8190a8;font-size:10px;letter-spacing:.04em}
+  .swift-caption-rule{height:1px;width:26px;background:#3b82f6}
+  .swift-scroll-cue{opacity:.75}.swift-scroll-line{height:1px;width:35px;background:linear-gradient(90deg,#60a5fa,transparent)}
+  .swift-hero h1{max-width:780px;text-wrap:balance;text-shadow:0 12px 60px rgba(0,0,0,.18)}
+  .swift-hero-copy>*{animation:swift-copy-enter .9s var(--swift-ease) both}
+  .swift-hero-copy>*:nth-child(1){animation-delay:.08s}.swift-hero-copy>*:nth-child(2){animation-delay:.18s}.swift-hero-copy>*:nth-child(3){animation-delay:.3s}.swift-hero-copy>*:nth-child(4){animation-delay:.42s}.swift-hero-copy>*:nth-child(5){animation-delay:.52s}
+  .swift-visual-wrap{animation:swift-visual-enter 1.1s .2s var(--swift-ease) both}
+  .card-hover{border-radius:16px;border-width:1px!important;box-shadow:0 5px 24px rgba(15,23,42,.025);transition:transform .45s var(--swift-ease),box-shadow .45s var(--swift-ease),border-color .3s ease!important}
+  .card-hover:hover{transform:translateY(-7px);box-shadow:0 22px 55px rgba(15,23,42,.10)!important}
+  section:not(.swift-hero) h2{letter-spacing:-.045em;text-wrap:balance}
+  #contact{position:relative;overflow:hidden;background:radial-gradient(ellipse at 50% 0%,#172a4d,#0a0a0a 72%)}
+  #contact:before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 50% 0%,rgba(37,99,235,.20),transparent 60%)}
+  #contact>div{position:relative}
+  @keyframes swift-copy-enter{from{opacity:0;transform:translateY(24px);filter:blur(5px)}to{opacity:1;transform:translateY(0);filter:blur(0)}}
+  @keyframes swift-visual-enter{from{opacity:0;transform:translateY(28px) scale(.97)}to{opacity:1;transform:translateY(0) scale(1)}}
+  @keyframes swift-dashboard-float{0%,100%{transform:rotateY(-7deg) rotateX(2deg) translateY(0)}50%{transform:rotateY(-4deg) rotateX(1deg) translateY(-8px)}}
+  @keyframes swift-tag-float{0%,100%{translate:0 0}50%{translate:0 -8px}}
+  @keyframes swift-glow-drift{from{transform:translate3d(-2%,1%,0) scale(.96)}to{transform:translate3d(2%,-2%,0) scale(1.04)}}
+  @keyframes swift-orbit{from{rotate:0deg}to{rotate:360deg}}
+  @keyframes swift-gradient-flow{from{background-position:0% 50%}to{background-position:100% 50%}}
+  @media(max-width:1023px){.swift-visual-wrap{min-height:440px;max-width:570px}.swift-hero{min-height:auto}.swift-hero:after{background:linear-gradient(180deg,rgba(7,11,22,.32),rgba(7,11,22,.1) 55%,rgba(7,11,22,.65))}.swift-hero-glow-one{right:-35%;top:32%}.swift-hero h1{margin-left:auto;margin-right:auto}.swift-visual-caption{bottom:-8px}}
+  @media(max-width:640px){.swift-hero{padding-top:120px;padding-bottom:64px}.swift-hero-grid{background-size:38px 38px}.swift-visual-wrap{min-height:350px;margin-top:8px}.swift-dashboard{border-radius:15px;transform:none;animation:swift-dashboard-mobile-float 8s ease-in-out infinite}.swift-dashboard-top{height:40px;padding:0 12px}.swift-dashboard-body{padding:17px}.swift-dash-title{font-size:30px}.swift-dash-orbit{width:58px;height:58px}.swift-system-grid{gap:7px}.swift-system-card{padding:10px 8px;gap:7px;border-radius:9px}.swift-system-symbol{width:28px;height:28px;flex-basis:28px;font-size:14px}.swift-system-card b{font-size:9px}.swift-system-card small{font-size:7px}.swift-tag-top{top:0;right:-1%}.swift-tag-bottom{bottom:3%;left:-1%}.swift-float-tag{padding:9px 10px;gap:7px}.swift-tag-icon{width:28px;height:28px}.swift-float-tag b{font-size:10px}.swift-float-tag small{font-size:8px}.swift-visual-caption{font-size:8px;bottom:-13px}.swift-orbit-a{width:110%}.swift-orbit-b{width:124%}.swift-dashboard-label{font-size:7px}.swift-hero-footnote{font-size:11px}.swift-foot-separator{display:none}}
+  @keyframes swift-dashboard-mobile-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+  @media(prefers-reduced-motion:reduce){.swift-hero *, .swift-hero:before,.swift-hero:after{animation:none!important;transition:none!important}.swift-dashboard{transform:none}.swift-float-tag{translate:none}}
+</style>
+
 </head>
 <body class="bg-white text-ink font-sans antialiased selection:bg-brand selection:text-white">
 
@@ -112,17 +196,70 @@ body>section:first-of-type a:hover{transform:translateY(-3px)}
     </div>
   </nav>
 
-  <section class="min-h-screen flex items-center justify-center pt-16 bg-ink-50 border-b border-ink-200">
-    <div class="max-w-4xl mx-auto px-6 text-center">
-      <p class="text-brand text-xs font-bold tracking-[0.25em] uppercase mb-6">Digital Growth Partner</p>
-      <h1 class="text-5xl sm:text-6xl md:text-7xl font-extrabold leading-[1.05] tracking-tight mb-6 text-ink">Build a stronger<br><span class="text-brand">digital business.</span></h1>
-      <p class="text-ink-600 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
-        One connected team for your website, brand, content and campaigns. Swift Ads helps businesses turn scattered digital activity into a clear plan for reaching customers and growing sustainably.
-      </p>
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-        <a href="services.html" class="bg-brand text-white font-bold px-8 py-3.5 hover:bg-brand-dark transition w-full sm:w-auto">View Services</a>
-        <a href="advertising.html" class="border-2 border-ink text-ink font-semibold px-8 py-3.5 hover:bg-ink hover:text-white transition w-full sm:w-auto">Advertising Platforms</a>
+  <section id="hero" class="swift-hero relative min-h-[92vh] lg:min-h-screen flex items-center pt-28 pb-20 lg:pt-24 overflow-hidden">
+    <div class="swift-hero-grid" aria-hidden="true"></div>
+    <div class="swift-hero-glow swift-hero-glow-one" aria-hidden="true"></div>
+    <div class="swift-hero-glow swift-hero-glow-two" aria-hidden="true"></div>
+    <div class="max-w-7xl mx-auto px-6 w-full relative z-10">
+      <div class="grid lg:grid-cols-[1.02fr_.98fr] gap-14 xl:gap-20 items-center">
+        <div class="swift-hero-copy text-center lg:text-left">
+          <div class="swift-eyebrow inline-flex items-center gap-3 rounded-full px-4 py-2 mb-7">
+            <span class="swift-live-dot"></span>
+            <span class="text-[10px] sm:text-xs font-bold tracking-[.22em] uppercase">Digital growth, deliberately built</span>
+          </div>
+          <h1 class="text-5xl sm:text-6xl xl:text-[5.25rem] font-extrabold leading-[.99] tracking-[-.065em] mb-7 text-white">
+            Make your next<br class="hidden sm:block"> move <span class="swift-gradient-text">matter.</span>
+          </h1>
+          <p class="text-slate-300 text-base sm:text-lg xl:text-xl max-w-xl mx-auto lg:mx-0 mb-9 leading-relaxed">
+            Strategy, websites, creative and campaigns—connected into one clear path from attention to action.
+          </p>
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+            <a href="services.html" class="swift-primary-cta inline-flex items-center justify-center gap-3 w-full sm:w-auto rounded-xl px-7 py-4 font-bold text-white">
+              Explore our services <span aria-hidden="true" class="swift-arrow">↗</span>
+            </a>
+            <a href="#contact" class="swift-secondary-cta inline-flex items-center justify-center gap-3 w-full sm:w-auto rounded-xl px-7 py-4 font-semibold text-white">
+              Start a conversation <span aria-hidden="true">→</span>
+            </a>
+          </div>
+          <div class="swift-hero-footnote flex flex-wrap items-center justify-center lg:justify-start gap-x-5 gap-y-3 mt-9 text-xs sm:text-sm text-slate-400">
+            <span class="inline-flex items-center gap-2"><span class="swift-check">✓</span> Clear strategy</span>
+            <span class="swift-foot-separator" aria-hidden="true"></span>
+            <span class="inline-flex items-center gap-2"><span class="swift-check">✓</span> Connected execution</span>
+            <span class="swift-foot-separator" aria-hidden="true"></span>
+            <span class="inline-flex items-center gap-2"><span class="swift-check">✓</span> Honest reporting</span>
+          </div>
+        </div>
+
+        <div class="swift-visual-wrap relative mx-auto w-full max-w-[620px]" aria-label="Illustrative digital campaign workspace">
+          <div class="swift-visual-orbit swift-orbit-a" aria-hidden="true"></div>
+          <div class="swift-visual-orbit swift-orbit-b" aria-hidden="true"></div>
+          <div class="swift-float-tag swift-tag-top"><span class="swift-tag-icon">✳</span><span><b>Strategy</b><small>Start with direction</small></span></div>
+          <div class="swift-float-tag swift-tag-bottom"><span class="swift-tag-icon swift-tag-icon-blue">↗</span><span><b>Creative + media</b><small>Move as one system</small></span></div>
+          <div class="swift-dashboard">
+            <div class="swift-dashboard-top">
+              <div class="flex items-center gap-2"><span class="swift-window-dot"></span><span class="swift-window-dot"></span><span class="swift-window-dot"></span></div>
+              <span class="swift-dashboard-label">SWIFT / GROWTH STUDIO</span>
+              <span class="swift-dashboard-menu">•••</span>
+            </div>
+            <div class="swift-dashboard-body">
+              <div class="flex items-start justify-between gap-4 mb-6">
+                <div><p class="swift-dash-kicker">THE BIG PICTURE</p><h2 class="swift-dash-title">Your digital<br>ecosystem.</h2></div>
+                <div class="swift-dash-orbit" aria-hidden="true"><span></span><i></i></div>
+              </div>
+              <div class="swift-flow-line" aria-hidden="true"><span></span><span></span><span></span></div>
+              <div class="swift-system-grid">
+                <div class="swift-system-card swift-system-featured"><span class="swift-system-symbol">◈</span><div><b>Brand & strategy</b><small>Find your direction</small></div><span class="swift-system-arrow">↗</span></div>
+                <div class="swift-system-card"><span class="swift-system-symbol">⌘</span><div><b>Web experience</b><small>Turn visits into action</small></div></div>
+                <div class="swift-system-card"><span class="swift-system-symbol">✳</span><div><b>Content & creative</b><small>Make the message land</small></div></div>
+                <div class="swift-system-card"><span class="swift-system-symbol">⌁</span><div><b>Paid campaigns</b><small>Reach the right people</small></div></div>
+              </div>
+              <div class="swift-dash-bottom"><span class="swift-dash-pulse"></span><span>One connected growth plan</span><span class="swift-dash-bottom-line"></span></div>
+            </div>
+          </div>
+          <div class="swift-visual-caption"><span class="swift-caption-rule"></span> A connected approach to digital growth</div>
+        </div>
       </div>
+      <div class="swift-scroll-cue hidden lg:flex items-center gap-3 mt-14 text-[10px] tracking-[.25em] uppercase text-slate-500"><span class="swift-scroll-line"></span> Scroll to explore</div>
     </div>
   </section>
 
