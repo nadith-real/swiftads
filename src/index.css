@@ -48,6 +48,7 @@ img { display: block; max-width: 100%; }
 .button:hover svg { transform: translate(2px, -2px); }
 .button-primary { background: #3475f4; color: white; border-color: #3475f4; }
 .button-primary:hover { background: #4c86fa; border-color: #4c86fa; transform: translateY(-2px); }
+.button-primary:disabled { background: #2a4a8f; border-color: #2a4a8f; transform: none; opacity: .7; }
 .button-secondary { background: transparent; color: #eef2f8; border-color: #ffffff25; }
 .button-secondary:hover { border-color: #ffffff65; background: #ffffff06; }
 .button-small { min-height: 43px; padding: 11px 18px; gap: 21px; font-size: 11px; }
@@ -261,13 +262,13 @@ a:hover .round-arrow { color: #fff; background: #3475f4; border-color: #3475f4; 
 .form-note { font-size: 10px; color: #879ab6; line-height: 1.85; margin-top: 15px; }
 .form-actions { margin-top: 29px; }
 .form-actions .button { width: 100%; justify-content: space-between; }
-.enquiry-result { margin-top: 27px; padding-top: 24px; border-top: 1px solid #8ae0c729; }
-.enquiry-result h3 { color: #b0e5d4; font-size: 14px; }
-.enquiry-result > p { color: #8299ab; font-size: 11px; line-height: 1.9; margin-top: 11px; }
-.enquiry-result pre { background: #080e17; border: 1px solid #ffffff0e; border-radius: 4px; padding: 16px; color: #9badc7; font-size: 10px; line-height: 1.9; white-space: pre-wrap; overflow-wrap: anywhere; margin-block: 17px; font-family: var(--font-body); }
-.result-actions { display: flex; gap: 9px; flex-wrap: wrap; }
-.result-actions .button { min-height: 38px; padding: 9px 13px; gap: 9px; font-size: 10px; }
-.copy-notice { color: var(--color-mint); font-size: 10px; min-height: 17px; margin-top: 13px; }
+.success-dialog { text-align: center; display: flex; flex-direction: column; align-items: center; }
+.success-dialog .button { min-width: 140px; }
+.success-tick { width: 72px; height: 72px; margin-bottom: 18px; }
+.success-tick-circle { fill: none; stroke: #8ae0c7; stroke-width: 2; stroke-dasharray: 151; stroke-dashoffset: 151; animation: tick-circle .55s ease-out forwards; }
+.success-tick-check { fill: none; stroke: #8ae0c7; stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 48; stroke-dashoffset: 48; animation: tick-check .32s .42s ease-out forwards; }
+@keyframes tick-circle { to { stroke-dashoffset: 0; } }
+@keyframes tick-check { to { stroke-dashoffset: 0; } }
 
 .dialog-overlay { position: fixed; inset: 0; z-index: 80; background: #02050bbf; backdrop-filter: blur(10px); display: grid; place-items: center; padding: 24px; animation: fade-in .2s ease-out; }
 .contact-dialog { position: relative; width: min(460px, 100%); background: #101925; border: 1px solid #ffffff18; border-radius: 9px; padding: 37px; box-shadow: 0 30px 100px #0009; }

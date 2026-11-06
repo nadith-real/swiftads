@@ -10,12 +10,12 @@ Core styles are in `src/index.css`. Shared layouts are in `src/components/Sectio
 
 Confirm the following in `SITE` in `src/content/copy.ts` before launch:
 
-- A real `whatsappHref` in the format `https://wa.me/94771234567`, and the matching published number.
+- WhatsApp chat uses `https://wa.me/94776915799` (`+94776915799`).
 - The real contact email, address or approved location wording, hours, and a response time the team can maintain.
 - Approved starting prices, if the agency wants to publish them. Existing price placeholders are intentionally visible on service detail pages.
 - Approved founding-team details before replacing the About page placeholder.
 
-The enquiry form prepares a brief locally and offers working copy and text-download actions. It does not claim to submit to an unconfigured backend. A valid WhatsApp URL enables the send action. Until then, WhatsApp buttons open a transparent explanation with a link to the enquiry form.
+The enquiry form posts to Formspree (`https://formspree.io/f/mkoagezw`). After a successful send, a confirmation popup with an animated tick is shown. WhatsApp buttons open `https://wa.me/94776915799`.
 
 ## Hosting
 

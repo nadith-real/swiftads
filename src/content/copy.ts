@@ -36,8 +36,8 @@ export const SITE = {
   ],
   headerCta: "Get a free quote",
   whatsappLabel: "Chat on WhatsApp",
-  whatsappNumber: "[PLACEHOLDER: WhatsApp number, e.g. 94771234567]",
-  whatsappHref: "", // Set the confirmed wa.me URL before launch.
+  whatsappNumber: "+94776915799",
+  whatsappHref: "https://wa.me/94776915799",
   email: "[PLACEHOLDER: e.g. hello@swiftdigital.online]",
   addressLines: [
     "[PLACEHOLDER: street address]",

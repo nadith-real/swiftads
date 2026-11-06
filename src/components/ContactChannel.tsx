@@ -43,7 +43,7 @@ export function ContactChannelProvider({ children }: { children: ReactNode }) {
         <button className="dialog-close" onClick={() => setOpen(false)} aria-label="Close WhatsApp information"><X /></button>
         <MessageCircle aria-hidden="true" />
         <h2 id="channel-title">Let's start a conversation.</h2>
-        <p className="body-copy" id="channel-description">Our WhatsApp number is being confirmed. In the meantime, use the project form to prepare a clear enquiry you can copy or download.</p>
+        <p className="body-copy" id="channel-description">Our WhatsApp number is being confirmed. In the meantime, use the project form to send your enquiry.</p>
         <Link to="/contact" className="button button-primary" onClick={() => setOpen(false)}>Start a project<ArrowUpRight /></Link>
       </div>
     </div>, document.body,

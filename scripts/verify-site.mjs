@@ -54,25 +54,24 @@ try {
   await page.getByRole('link', { name: 'Discuss your project' }).click();
   await page.waitForURL('**/contact?service=ai-automations');
   assert.equal(await page.getByRole('button', { name: 'AI Automations', exact: true }).getAttribute('aria-pressed'), 'true');
+  await page.route('https://formspree.io/f/mkoagezw', async (route) => {
+    await route.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify({ ok: true }) });
+  });
   await page.getByLabel('Your name').fill('Test Project Owner');
   await page.getByLabel('Email address').fill('test@example.com');
   await page.getByLabel('Business name').fill('Test business');
   await page.getByLabel('Tell us about your project').fill('We need a website and a more efficient enquiry workflow for our business.');
-  await page.getByRole('button', { name: 'Prepare project enquiry' }).click();
-  await page.getByRole('heading', { name: 'Your enquiry is ready.' }).waitFor();
-  assert.match(await page.locator('.enquiry-result pre').innerText(), /AI Automations/);
-  await page.getByRole('button', { name: 'Copy enquiry' }).click();
-  await page.waitForFunction(() => document.querySelector('.copy-notice')?.textContent?.length);
-  assert.match(await page.locator('.copy-notice').innerText(), /Enquiry copied/);
-  assert.match(await page.evaluate(() => navigator.clipboard.readText()), /Test Project Owner/);
-  const downloadPromise = page.waitForEvent('download');
-  await page.getByRole('button', { name: 'Download brief' }).click();
-  assert.equal((await downloadPromise).suggestedFilename(), 'swift-digital-project-enquiry.txt');
-
-  await page.getByRole('button', { name: 'Chat on WhatsApp', exact: true }).first().click();
-  await page.getByRole('dialog').waitFor();
+  await page.getByRole('button', { name: 'Send enquiry' }).click();
+  await page.getByRole('heading', { name: 'Message sent.' }).waitFor();
+  assert.equal(await page.locator('.success-tick').count(), 1);
   await page.keyboard.press('Escape');
   assert.equal(await page.getByRole('dialog').count(), 0);
+
+  const popupPromise = page.waitForEvent('popup');
+  await page.getByRole('button', { name: 'Chat on WhatsApp', exact: true }).first().click();
+  const popup = await popupPromise;
+  assert.match(popup.url(), /wa\.me\/94776915799/);
+  await popup.close();
 
   await visit('/portfolio#hospitality');
   assert.equal(await page.locator('#brief-hospitality').isVisible(), true);
@@ -116,7 +115,7 @@ try {
   assert.equal(await page.getByRole('button', { name: 'Open menu' }).getAttribute('aria-expanded'), 'false');
 
   assert.deepEqual(failures, []);
-  console.log('PASS: clean navigation, back/forward, fallback and legacy links, 11 service pages, filters, concept disclosures, enquiry preparation/copy/download, WhatsApp dialog, mobile menu, and 36 responsive page/viewport checks.');
+  console.log('PASS: clean navigation, back/forward, fallback and legacy links, 11 service pages, filters, concept disclosures, enquiry send confirmation, WhatsApp chat, mobile menu, and 36 responsive page/viewport checks.');
 } finally {
   await browser.close();
 }
