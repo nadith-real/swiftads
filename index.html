@@ -24,9 +24,58 @@
       rel="stylesheet"
     />
     <link rel="preload" href="/images/swift-dark-hero.webp" as="image" type="image/webp" fetchpriority="high" />
+    <style>
+      .swift-call-button {
+        position: fixed;
+        right: max(24px, env(safe-area-inset-right));
+        bottom: max(24px, env(safe-area-inset-bottom));
+        z-index: 1000;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        min-height: 54px;
+        padding: 0 21px;
+        border: 1px solid rgba(255,255,255,.22);
+        border-radius: 999px;
+        background: #6494ff;
+        color: #080b10;
+        box-shadow: 0 10px 32px rgba(0,0,0,.32), 0 0 24px rgba(100,148,255,.22);
+        font: 700 14px/1 Inter, sans-serif;
+        text-decoration: none;
+        transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+      }
+      .swift-call-button:hover {
+        transform: translateY(-3px);
+        background: #82aaff;
+        box-shadow: 0 14px 38px rgba(0,0,0,.38), 0 0 30px rgba(100,148,255,.3);
+      }
+      .swift-call-button:focus-visible {
+        outline: 3px solid #f4f6fa;
+        outline-offset: 4px;
+      }
+      .swift-call-button svg { width: 19px; height: 19px; flex: 0 0 auto; }
+      @media (max-width: 480px) {
+        .swift-call-button {
+          right: max(16px, env(safe-area-inset-right));
+          bottom: max(16px, env(safe-area-inset-bottom));
+          min-height: 50px;
+          padding: 0 18px;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .swift-call-button { transition: none; }
+      }
+    </style>
   </head>
   <body>
     <div id="root"></div>
+    <a class="swift-call-button" href="tel:+94776915799" aria-label="Call Swift Digital at +94 77 691 5799">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M7.2 3.5h2.4l1.2 4.1-1.7 1.7a15.2 15.2 0 0 0 5.6 5.6l1.7-1.7 4.1 1.2v2.4c0 1.1-.9 2-2 2C10.2 18.8 5.2 13.8 5.2 7.5c0-1.1.9-2 2-2Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span>Call us</span>
+    </a>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
