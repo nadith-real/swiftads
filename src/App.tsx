@@ -1,7 +1,6 @@
 import { useEffect, useRef, type ReactNode } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import WhatsAppFloat from '@/components/WhatsAppFloat';
 import { ContactChannelProvider } from '@/components/ContactChannel';
 import Home from '@/pages/Home';
 import About from '@/pages/About';
@@ -33,5 +32,5 @@ export default function App() {
     case 'contact': page = <Contact />; break;
     default: page = <NotFound path={path} />;
   }
-  return <ContactChannelProvider><a className="skip-link" href="#main-content">Skip to content</a><Header /><main key={key} id="main-content" className="page-enter" tabIndex={-1} style={{ outline: 'none' }}>{page}</main><Footer /><WhatsAppFloat /></ContactChannelProvider>;
+  return <ContactChannelProvider><a className="skip-link" href="#main-content">Skip to content</a><Header /><main key={key} id="main-content" className="page-enter" tabIndex={-1} style={{ outline: 'none' }}>{page}</main><Footer /></ContactChannelProvider>;
 }
