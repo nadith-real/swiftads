@@ -1,7 +1,18 @@
-import { MessageCircle } from 'lucide-react';
-import { useWhatsApp } from './ContactChannel';
+import { SITE } from '@/content/copy';
 
 export default function WhatsAppFloat() {
-  const whatsapp = useWhatsApp();
-  return <button type="button" className="whatsapp-float" onClick={whatsapp} aria-label="Chat on WhatsApp"><MessageCircle aria-hidden="true" /><span>Chat with us</span></button>;
+  return (
+    <a
+      className="whatsapp-float"
+      href={SITE.whatsappHref}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Chat with us on WhatsApp"
+      title="Chat with us on WhatsApp"
+    >
+      <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+        <path fill="currentColor" d="M16.02 3.2a12.6 12.6 0 0 0-10.8 19.1L3.5 28.8l6.7-1.7A12.6 12.6 0 1 0 16.02 3.2Zm0 22.9a10.3 10.3 0 0 1-5.25-1.44l-.38-.23-3.97 1.02 1.06-3.87-.25-.4a10.3 10.3 0 1 1 8.79 4.92Zm5.66-7.72c-.31-.16-1.84-.91-2.12-1.01-.29-.1-.5-.16-.71.16-.21.31-.81 1.01-.99 1.22-.18.21-.36.24-.67.08-.31-.16-1.31-.48-2.5-1.53-.92-.82-1.54-1.84-1.72-2.15-.18-.31-.02-.48.14-.64.14-.14.31-.36.47-.54.16-.18.21-.31.31-.52.1-.21.05-.39-.03-.55-.08-.16-.71-1.7-.97-2.33-.26-.61-.52-.53-.71-.54h-.6c-.21 0-.55.08-.84.39-.29.31-1.1 1.07-1.1 2.61s1.13 3.03 1.29 3.24c.16.21 2.22 3.39 5.37 4.75.75.32 1.34.52 1.8.66.76.24 1.45.21 1.99.13.61-.09 1.84-.75 2.1-1.48.26-.73.26-1.36.18-1.49-.08-.13-.29-.21-.6-.37Z"/>
+      </svg>
+    </a>
+  );
 }
